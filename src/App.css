@@ -1,0 +1,150 @@
+/* Dark theme */
+:root {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --accent-color: #1e88e5;
+  --event-color: #4caf50;
+  --sidebar-bg: #1e1e1e;
+  --nav-bg: #2c2c2c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-nav {
+  background-color: var(--nav-bg);
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.top-nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.top-nav a:hover {
+  background-color: var(--accent-color);
+}
+
+.home {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.create-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--event-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.main-calendar {
+  flex: 1;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav-bar button {
+  padding: 5px 10px;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-bar span {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* React Big Calendar overrides */
+.rbc-calendar {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.rbc-header {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  padding: 10px;
+}
+
+.rbc-today {
+  background-color: rgba(30, 136, 229, 0.2);
+}
+
+.rbc-event {
+  background-color: var(--event-color);
+  border-radius: 15px;
+  border: none;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 5px;
+}
+
+.rbc-event:hover {
+  background-color: #66bb6a;
+}
+
+.rbc-slot-selection {
+  background-color: rgba(30, 136, 229, 0.3);
+}
+
+.mini-calendar {
+  margin-top: 20px;
+}
+
+.mini-calendar .rbc-calendar {
+  background-color: var(--sidebar-bg);
+}
+
+.mini-calendar .rbc-header {
+  background-color: var(--nav-bg);
+  color: var(--text-color);
+  font-size: 0.8em;
+}
+
+.mini-calendar .rbc-today {
+  background-color: rgba(30, 136, 229, 0.3);
+}
+
+.mini-calendar .rbc-event {
+  background-color: var(--event-color);
+  border-radius: 10px;
+  font-size: 0.7em;
+  padding: 1px 3px;
+}
