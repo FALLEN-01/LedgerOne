@@ -112,7 +112,7 @@ function App() {
             alignItems: 'center',
             gap: '12px'
           }}>
-            🏛️ Church Billing Calendar
+            🏛️  LegderOne
           </h1>
           
           <button
